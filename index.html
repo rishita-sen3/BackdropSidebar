@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: url("photo.jpg") no-repeat center center/cover;
+        color: white;
+        height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Hide default checkbox */
+      #check {
+        display: none;
+      }
+
+      /* Hamburger icon */
+      .btn_one {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      /* Sidebar */
+      .sidebar_menu {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      /* Sidebar visible when checkbox checked */
+      #check:checked ~ .sidebar_menu {
+        left: 0;
+      }
+
+      /* Close button */
+      .btn_two {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      /* Sidebar content */
+      .logo a {
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 40px;
+      }
+
+      .menu ul li {
+        margin: 15px 0;
+      }
+
+      .menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .menu ul li a:hover {
+        color: #ccc;
+      }
+
+      .social_media {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+      }
+
+      .social_media a {
+        color: white;
+        margin-right: 10px;
+        font-size: 18px;
+      }
+
+      .social_media a:hover {
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="check" />
+
+    <div class="btn_one">
+      <label for="check">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+    </div>
+
+    <div class="sidebar_menu">
+      <div class="logo">
+        <a href="#">Apna College</a>
+      </div>
+
+      <div class="btn_two">
+        <label for="check">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><i class="fa-solid fa-image"></i> <a href="#">Gallery</a></li>
+          <li><i class="fa-solid fa-arrow-up-right-from-square"></i> <a href="#">Shortcuts</a></li>
+          <li><i class="fa-solid fa-photo-film"></i> <a href="#">Exhibits</a></li>
+          <li><i class="fa-solid fa-calendar-days"></i> <a href="#">Events</a></li>
+          <li><i class="fa-solid fa-store"></i> <a href="#">Store</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="#">Contact</a></li>
+          <li><i class="fa-regular fa-comments"></i> <a href="#">Feedback</a></li>
+        </ul>
+      </div>
+
+      <div class="social_media">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
